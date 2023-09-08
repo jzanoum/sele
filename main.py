@@ -1,9 +1,9 @@
 # Importer les bibliothèques
+import os # Importer os pour accéder aux variables d'environnement
 import json
 import requests # Importer requests pour faire des requêtes HTTP
 from selenium import webdriver # Importer webdriver pour contrôler le navigateur
 from flask import Flask, request
-
 # Créer une instance de l'application flask
 app = Flask(__name__)
 
