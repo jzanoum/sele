@@ -48,9 +48,5 @@ def process_json(data):
     # Retourner le nom du fichier de sortie
     return output_file
 
-# Lancer l'application flask
-if __name__ == '__main__':
-    app.run()
-
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
