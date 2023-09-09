@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV FLASK_APP=main.py
 
 # Lancer l'application Flask avec la commande 
-CMD ["python", "main.py", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0"]
