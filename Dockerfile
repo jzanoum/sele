@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Définir la variable d'environnement FLASK_APP
-ENV FLASK_APP=app.py
+ENV FLASK_APP=main.py
 
 # Lancer l'application Flask avec la commande 
 CMD ["python", "main.py", "--host=0.0.0.0"]
