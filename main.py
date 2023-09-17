@@ -46,7 +46,7 @@ def process_json(data):
         # Écrire les données de la vidéo dans le fichier
         f.write(video_data)
 
-    # Retourner le nom du fichier de sortie
+    # Retourner le nom du fichier de sorti
     return output_file
 
 if __name__ == '__main__':
