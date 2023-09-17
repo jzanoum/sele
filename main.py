@@ -28,7 +28,7 @@ def process_json(data):
     options = webdriver.ChromeOptions() # Créer un objet options pour configurer le navigateur
     options.add_argument('headless') # Ajouter l'argument headless pour ne pas afficher le navigateur
    driver = webdriver.Chrome(options=options)
- # Créer un objet driver avec le chemin du chromedriver et les options
+
     driver.get(url) # Accéder à l'url avec le driver
 
     # Utiliser requests pour obtenir le contenu binaire de la vidéo
