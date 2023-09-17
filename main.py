@@ -27,9 +27,8 @@ def process_json(data):
     # Utiliser selenium pour accéder à l'url de la vidéo
     options = webdriver.ChromeOptions() # Créer un objet options pour configurer le navigateur
     options.add_argument('headless') # Ajouter l'argument headless pour ne pas afficher le navigateur
-   driver = webdriver.Chrome(options=options)
-
-    driver.get(url) # Accéder à l'url avec le driver
+    driver = webdriver.Chrome('chromedriver', options=options)
+    driver.get(url) 
 
     # Utiliser requests pour obtenir le contenu binaire de la vidéo
     video_url = driver.find_element_by_tag_name('video').get_attribute('src') # Trouver l'élément vidéo dans la page et obtenir son attribut src qui contient l'url de la vidéo
