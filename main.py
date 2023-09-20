@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, jsonify
+import requests
 import validators
 
 app = Flask(__name__)
