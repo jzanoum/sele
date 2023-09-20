@@ -1,20 +1,23 @@
-# Utilisez l'image Python 3.7-slim comme image de base
-FROM python:3.7-slim
+# Utilisez une image Python officielle en tant qu'image parent
+FROM python:3.9-slim
 
-# Définissez le répertoire de travail sur /app
+# Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copiez le fichier requirements.txt dans le répertoire de travail
+# Copiez le fichier requirements.txt dans le conteneur
 COPY requirements.txt .
 
-# Installez les dépendances à partir du fichier requirements.txt
-RUN pip install -r requirements.txt
+# Installez les dépendances du projet
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiez tout le contenu du répertoire actuel dans le répertoire de travail
+# Copiez le reste du code dans le conteneur
 COPY . .
 
-# Exposez le port 5000 pour que l'application puisse être accessible depuis l'extérieur du conteneur
+# Exposez le port 5000 pour accéder à l'application Flask
 EXPOSE 5000
 
-# Définissez la commande par défaut pour exécuter l'application Flask
-CMD ["python", "main.py"]
+# Définissez la variable d'environnement FLASK_APP sur le nom du fichier principal de votre application Flask
+ENV FLASK_APP=main.py
+
+# Exécutez l'application Flask lorsque le conteneur démarre
+CMD ["flask", "run", "--host=0.0.0.0"]
