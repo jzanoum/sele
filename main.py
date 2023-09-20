@@ -10,7 +10,7 @@ def download_video():
     format = request.json['format']
     folder = request.json['folder']
     
-    if not is_valid_video_url(url):
+    if not validators.url(url):
         return jsonify({'message': 'L\'URL fournie n\'est pas un lien vidéo valide.'})
     
     response = requests.get(url)
