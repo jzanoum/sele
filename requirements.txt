@@ -1,5 +1,5 @@
 Flask==2.3.3
 request==2.31.0
-requests-file==1.5.1
+request-file==1.5.1
 gunicorn==20.0.4
 validators==0.22.0
