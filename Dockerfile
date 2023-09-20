@@ -5,7 +5,7 @@ FROM python:3.7-slim
 WORKDIR /app
 
 # Copiez le fichier requirements.txt dans le répertoire de travail
-COPY requirements.txt requirements.txt
+COPY requirements.txt 
 
 # Installez les dépendances à partir du fichier requirements.txt
 RUN pip install -r requirements.txt
