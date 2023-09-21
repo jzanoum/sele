@@ -17,7 +17,7 @@ def download_video():
     response = requests.get(url)
     
     # Obtenez le répertoire de stockage externe sur Android
-    external_storage_dir = os.path.join(os.environ['EXTERNAL_STORAGE'], 'VotreApplication')
+    external_storage_dir = '/storage/emulated/0/VotreApplication'
     
     # Créez un répertoire spécifique pour votre application
     os.makedirs(external_storage_dir, exist_ok=True)
