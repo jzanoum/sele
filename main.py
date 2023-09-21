@@ -18,7 +18,7 @@ video_extensions = ['.mp4', '.avi', '.mov']
 is_video_url = any(url.endswith(extension) for extension in video_extensions)
 
     if not is_video_url:
-       return jsonify({'message': 'L\'URL fournie n\'est pas un lien vidéo valide.'})
+        return jsonify({'message': 'L\'URL fournie n\'est pas un lien vidéo valide.'})
     
     response = requests.get(url)
     
